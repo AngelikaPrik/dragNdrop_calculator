@@ -1,7 +1,7 @@
 {
   "name": "calculator-test",
   "private": true,
-  "homepage": "https://AngelikaPrik.github.io/calculator_dragNdrop/",
+  "homepage": "https://AngelikaPrik.github.io/dragNdrop_calculator",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
