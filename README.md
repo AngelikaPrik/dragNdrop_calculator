@@ -1,1 +1,1 @@
-Калькулятор: https://angelikaprik.github.io/calculator_dragNdrop/
+Калькулятор: https://angelikaprik.github.io/dragNdrop_calculator/
