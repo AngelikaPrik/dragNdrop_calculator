@@ -1,6 +1,7 @@
-import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import { getCompute } from "../calculatorSlice";
-import { ComputeButton } from "../uiModels";
+import React from 'react';
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
+import { getCompute } from '../calculatorSlice';
+import { ComputeButton } from '../uiModels';
 
 export const Compute = () => {
   const { mode } = useAppSelector(state => state.dragDrop);
@@ -8,7 +9,7 @@ export const Compute = () => {
 
   return (
     <ComputeButton
-      disabled={mode == "Constructor"}
+      disabled={mode == 'Constructor'}
       disableRipple
       onClick={() => dispatch(getCompute())}
     >

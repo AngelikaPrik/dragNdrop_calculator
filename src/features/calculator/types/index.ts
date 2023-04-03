@@ -1,1 +1,1 @@
-export type OperationType = "/" | "х" | "-" | "+" | "=" | null;
+export type OperationType = '/' | 'х' | '-' | '+' | '=' | null;

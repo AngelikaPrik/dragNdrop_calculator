@@ -1,10 +1,11 @@
-import { Stack } from "@mui/system";
-import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import { setOperation } from "../calculatorSlice";
-import { OperationType } from "../types";
-import { OperationBtn } from "../uiModels";
+import React from 'react';
+import { Stack } from '@mui/system';
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
+import { setOperation } from '../calculatorSlice';
+import { OperationType } from '../types';
+import { OperationBtn } from '../uiModels';
 
-const operations: OperationType[] = ["/", "х", "-", "+"];
+const operations: OperationType[] = ['/', 'х', '-', '+'];
 
 export const Operations = () => {
   const { mode } = useAppSelector(state => state.dragDrop);
@@ -17,11 +18,11 @@ export const Operations = () => {
         <OperationBtn
           key={i}
           disableRipple
-          disabled={mode == "Constructor"}
+          disabled={mode == 'Constructor'}
           onClick={() => dispatch(setOperation(d))}
           sx={{
-            background: operation == d ? "#5D5FEF" : "#fff",
-            color: operation == d ? "#fff" : "#000",
+            background: operation == d ? '#5D5FEF' : '#fff',
+            color: operation == d ? '#fff' : '#000',
           }}
         >
           {d}

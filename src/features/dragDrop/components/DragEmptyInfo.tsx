@@ -1,16 +1,17 @@
-import { Stack, Typography } from "@mui/material";
-import add from "../../../assets/add.svg";
+import React from 'react';
+import { Stack, Typography } from '@mui/material';
+import add from '../../../assets/add.svg';
 
 export const DragEmptyInfo = () => {
   return (
     <Stack
       sx={{
-        width: "24rem",
-        height: "44.8rem",
-        position: "absolute",
-        top: "85%",
-        left: "50%",
-        transform: "translate(-50%,-50%)",
+        width: '24rem',
+        height: '44.8rem',
+        position: 'absolute',
+        top: '85%',
+        left: '50%',
+        transform: 'translate(-50%,-50%)',
       }}
     >
       <Stack alignItems="center" spacing="1.2rem">

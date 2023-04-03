@@ -1,25 +1,26 @@
-import { Box, Typography } from "@mui/material";
-import eye from "../../../assets/eye.svg";
-import selector from "../../../assets/selector.svg";
-import eyeFill from "../../../assets/eye-fill.svg";
-import selectorFill from "../../../assets/selector-fill.svg";
-import { ModeType } from "../types";
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+import eye from '../../../assets/eye.svg';
+import selector from '../../../assets/selector.svg';
+import eyeFill from '../../../assets/eye-fill.svg';
+import selectorFill from '../../../assets/selector-fill.svg';
+import { ModeType } from '../types';
 
 const tabs: ITabs[] = [
-  { title: "Runtime", icon: eye, activeIcon: eyeFill },
-  { title: "Constructor", icon: selector, activeIcon: selectorFill },
+  { title: 'Runtime', icon: eye, activeIcon: eyeFill },
+  { title: 'Constructor', icon: selector, activeIcon: selectorFill },
 ];
 
 export const DragDropTabs = ({ mode, setMode }: ITabsField) => {
   const activeStyleTab = (tab: ITabs) => {
     if (mode === tab.title) {
       return {
-        background: "#fff",
-        outline: "1px solid #E2E3E5",
+        background: '#fff',
+        outline: '1px solid #E2E3E5',
       };
     }
     return {
-      cursor: "pointer",
+      cursor: 'pointer',
     };
   };
 

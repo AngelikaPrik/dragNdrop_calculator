@@ -2,7 +2,7 @@ import {
   DraggableProvidedDraggableProps,
   DraggableProvidedDragHandleProps,
   DroppableProvidedProps,
-} from "react-beautiful-dnd";
+} from 'react-beautiful-dnd';
 
 export interface IMyBox {
   disactiveDraggedItems?: boolean;
@@ -25,8 +25,8 @@ export interface IMyStack {
 
 export interface IDragComponent {
   id: string;
-  component: any;
+  component: JSX.Element;
   isDragged: boolean;
   name: string;
 }
-export type ModeType = "Constructor" | "Runtime";
+export type ModeType = 'Constructor' | 'Runtime';

@@ -1,5 +1,5 @@
-import { Box, Stack } from "@mui/material";
-import React from "react";
+import { Box, Stack } from '@mui/material';
+import React from 'react';
 import {
   DraggableProvided,
   DraggableRubric,
@@ -7,13 +7,13 @@ import {
   Droppable,
   DroppableProvided,
   DroppableStateSnapshot,
-} from "react-beautiful-dnd";
-import { DragEmptyInfo } from "./DragEmptyInfo";
-import { DragDropTabs } from "./DragDropTabs";
-import { IDragComponent, ModeType } from "../types";
+} from 'react-beautiful-dnd';
+import { DragEmptyInfo } from './DragEmptyInfo';
+import { DragDropTabs } from './DragDropTabs';
+import { IDragComponent, ModeType } from '../types';
 
-import { DraggableItem } from "./DraggableItem";
-import { MyStack } from "../uiModels";
+import { DraggableItem } from './DraggableItem';
+import { MyStack } from '../uiModels';
 
 const getCloneItem =
   (items: IDragComponent[]) =>
@@ -38,15 +38,16 @@ const getCloneItem =
     );
   };
 
+
 export const DroppableList = (props: IDroppableList) => {
   const { droppableId, items, mode, setMode } = props;
   const shouldHidden = (): boolean => {
-    return droppableId === "sidebar" && mode === "Runtime";
+    return droppableId === 'sidebar' && mode === 'Runtime';
   };
 
   return (
     <Stack>
-      {droppableId === "builder" && (
+      {droppableId === 'builder' && (
         <DragDropTabs mode={mode} setMode={setMode} />
       )}
       {!shouldHidden() && (
@@ -56,14 +57,14 @@ export const DroppableList = (props: IDroppableList) => {
               <MyStack
                 iRef={provided.innerRef}
                 isDraggingOver={sn.isDraggingOver}
-                isDashed={droppableId === "builder" && !items.length}
+                isDashed={droppableId === 'builder' && !items.length}
                 droppableProps={provided.droppableProps}
               >
                 {items.length ? (
                   items.map((item, i) => {
                     const shouldRenderClone =
                       item.id === sn.draggingFromThisWith &&
-                      droppableId !== "builder";
+                      droppableId !== 'builder';
                     return (
                       <React.Fragment key={item.id}>
                         {shouldRenderClone ? (

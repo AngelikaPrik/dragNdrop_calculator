@@ -1,9 +1,10 @@
-import { Grid } from "@mui/material";
-import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
-import { addDigit, addFloat } from "../calculatorSlice";
-import { OperationBtn } from "../uiModels";
+import React from 'react';
+import { Grid } from '@mui/material';
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
+import { addDigit, addFloat } from '../calculatorSlice';
+import { OperationBtn } from '../uiModels';
 
-const digits: DigitType[] = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ","];
+const digits: DigitType[] = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ','];
 
 export const Digits = () => {
   const { mode } = useAppSelector(state => state.dragDrop);
@@ -11,7 +12,7 @@ export const Digits = () => {
 
   const onClick = (digit: DigitType): void => {
     const val = digit.toString();
-    if (val === ",") {
+    if (val === ',') {
       dispatch(addFloat(val));
     } else {
       dispatch(addDigit(val));
@@ -23,7 +24,7 @@ export const Digits = () => {
       {digits.map((d, i) => (
         <Grid item xs={(d as number) >= 1 ? 4 : d == 0 ? 8 : 4} key={i}>
           <OperationBtn
-            disabled={mode == "Constructor"}
+            disabled={mode == 'Constructor'}
             disableRipple
             onClick={() => onClick(d)}
           >

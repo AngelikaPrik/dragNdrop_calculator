@@ -1,7 +1,7 @@
-import { OperationType } from "./types";
-import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
-import { toFloat, compute } from "./utils/calculator.function";
+import { OperationType } from './types';
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+import { toFloat, compute } from './utils/calculator.function';
 
 interface IInitialState {
   operation: OperationType;
@@ -11,24 +11,24 @@ interface IInitialState {
 
 const initialState: IInitialState = {
   operation: null,
-  operandOne: "",
-  operandTwo: "",
+  operandOne: '',
+  operandTwo: '',
 };
 
 export const calculatorSlice = createSlice({
-  name: "calculator",
+  name: 'calculator',
   initialState,
   reducers: {
     addDigit(state, { payload }: PayloadAction<string>) {
-      if (!state.operation || state.operation === "=") {
-        if (state.operation === "=") {
+      if (!state.operation || state.operation === '=') {
+        if (state.operation === '=') {
           state.operandOne = payload;
           state.operation = null;
         } else {
           state.operandOne += payload;
         }
       } else {
-        if (state.operandTwo === "0" || state.operandTwo === "-0") {
+        if (state.operandTwo === '0' || state.operandTwo === '-0') {
           state.operandTwo = payload;
         } else {
           state.operandTwo += payload;
@@ -48,17 +48,17 @@ export const calculatorSlice = createSlice({
       state.operation = operation;
     },
     setOperation(state, { payload }: PayloadAction<OperationType>) {
-      if (state.operandOne == "Не определено") return;
-      if (payload == "-" && !state.operandOne) {
-        state.operandOne = "-";
-      } else if (!state.operandOne && payload && payload !== "=") {
-        state.operandOne = "0";
+      if (state.operandOne == 'Не определено') return;
+      if (payload == '-' && !state.operandOne) {
+        state.operandOne = '-';
+      } else if (!state.operandOne && payload && payload !== '=') {
+        state.operandOne = '0';
         state.operation = payload;
-      } else if (state.operandOne == "-") return;
+      } else if (state.operandOne == '-') return;
       else state.operation = payload;
     },
     setOperands(state, { payload }: PayloadAction<string>) {
-      if (!state.operation || state.operation == "=") {
+      if (!state.operation || state.operation == '=') {
         state.operandOne = payload;
       } else {
         state.operandTwo = payload;
@@ -74,8 +74,8 @@ export const calculatorSlice = createSlice({
           state.operandTwo,
           state.operation
         );
-        state.operation = "=";
-        state.operandTwo = "";
+        state.operation = '=';
+        state.operandTwo = '';
       }
     },
   },

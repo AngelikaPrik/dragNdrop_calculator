@@ -1,6 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
-import calculator from "../features/calculator/calculatorSlice";
-import dragDrop from "../features/dragDrop/dragDropSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import calculator from '../features/calculator/calculatorSlice';
+import dragDrop from '../features/dragDrop/dragDropSlice';
 
 export const store = configureStore({
   reducer: { calculator, dragDrop },

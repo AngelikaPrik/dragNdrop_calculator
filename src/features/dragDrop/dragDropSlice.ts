@@ -1,17 +1,17 @@
-import { ModeType } from "./types";
-import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
+import { ModeType } from './types';
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
 
 interface IInitialState {
   mode: ModeType;
 }
 
 const initialState: IInitialState = {
-  mode: "Constructor",
+  mode: 'Constructor',
 };
 
 export const dragDropSlice = createSlice({
-  name: "dragDrop",
+  name: 'dragDrop',
   initialState,
   reducers: {
     setMode(state, { payload }: PayloadAction<ModeType>) {
