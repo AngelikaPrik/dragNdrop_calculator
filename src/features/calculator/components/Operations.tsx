@@ -1,16 +1,15 @@
-import React from 'react';
-import { Stack } from '@mui/system';
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
-import { setOperation } from '../calculatorSlice';
-import { OperationType } from '../types';
-import { OperationBtn } from '../uiModels';
+import { Stack } from '@mui/system'
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux'
+import { setOperation } from '../calculatorSlice'
+import { OperationType } from '../types'
+import { OperationBtn } from '../uiModels'
 
-const operations: OperationType[] = ['/', 'х', '-', '+'];
+const operations: OperationType[] = ['/', 'х', '-', '+']
 
 export const Operations = () => {
-  const { mode } = useAppSelector(state => state.dragDrop);
-  const { operation } = useAppSelector(state => state.calculator);
-  const dispatch = useAppDispatch();
+  const { mode } = useAppSelector(state => state.dragDrop)
+  const { operation } = useAppSelector(state => state.calculator)
+  const dispatch = useAppDispatch()
 
   return (
     <Stack direction="row" spacing="0.8rem">
@@ -29,5 +28,5 @@ export const Operations = () => {
         </OperationBtn>
       ))}
     </Stack>
-  );
-};
+  )
+}

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Result, Operations, Digits, Compute } from '../calculator';
-import { IDragComponent } from './types';
+import React from 'react'
+import { Result, Operations, Digits, Compute } from '../calculator'
+import { IDragComponent } from './types'
 
 export const SIDEBAR_ITEMS: IDragComponent[] = [
   {
@@ -27,4 +27,4 @@ export const SIDEBAR_ITEMS: IDragComponent[] = [
     isDragged: false,
     name: 'compute',
   },
-];
+]

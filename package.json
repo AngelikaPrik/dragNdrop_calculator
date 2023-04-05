@@ -3,7 +3,28 @@
   "private": true,
   "homepage": "https://AngelikaPrik.github.io/dragNdrop_calculator",
   "version": "0.0.0",
-  "type": "commonjs",
+  "type": "module",
+  "eslintConfig": {
+    "root": true,
+    "ignorePatterns": [
+      "node_modules/*",
+      ".next/*",
+      "out/*",
+      "build/*"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    }
+  },
   "scripts": {
     "deploy": "gh-pages -d dist",
     "dev": "vite",

@@ -2,7 +2,7 @@ import {
   DraggableProvidedDraggableProps,
   DraggableProvidedDragHandleProps,
   DroppableProvidedProps,
-} from 'react-beautiful-dnd';
+} from 'react-beautiful-dnd'
 
 export interface IMyBox {
   disactiveDraggedItems?: boolean;
@@ -30,3 +30,4 @@ export interface IDragComponent {
   name: string;
 }
 export type ModeType = 'Constructor' | 'Runtime';
+export type ColumnNameType = 'sidebar' | 'builder'

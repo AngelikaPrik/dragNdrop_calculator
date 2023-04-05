@@ -1,6 +1,6 @@
-import React from 'react';
-import { Box, Container, ContainerProps, Stack, styled } from '@mui/material';
-import { IMyBox, IMyStack } from '../types';
+import React from 'react'
+import { Box, Container, ContainerProps, Stack, styled } from '@mui/material'
+import { IMyBox, IMyStack } from '../types'
 
 export const DragContainer = styled(Container)({
   background: '#fff',
@@ -10,7 +10,7 @@ export const DragContainer = styled(Container)({
   justifyContent: 'space-between',
   alignItems: 'end',
   boxShadow: '0 0 10px #5D5FEF',
-}) as React.FC<ContainerProps>;
+}) as React.FC<ContainerProps>
 
 export const MyBox = (props: IMyBox) => {
   const {
@@ -21,21 +21,21 @@ export const MyBox = (props: IMyBox) => {
     dragHandleProps,
     disactiveDraggedItems: disActive,
     mode,
-  } = props;
+  } = props
 
-  const important = ' !important';
+  const important = ' !important'
   const cursor =
     (mode === 'Runtime'
       ? 'pointer'
       : disableResult || disActive
       ? 'no-drop'
-      : 'grab') + important;
-  const transform = (!isBuilder || disableResult ? 'none' : '') + important;
+      : 'grab') + important
+  const transform = (!isBuilder || disableResult ? 'none' : '') + important
   const shadow =
     isBuilder || disActive
       ? ''
       : `0px 2px 4px rgba(0, 0, 0, 0.06), 
-		  0px 4px 6px rgba(0, 0, 0, 0.1)`;
+		  0px 4px 6px rgba(0, 0, 0, 0.1)`
 
   return (
     <Box
@@ -56,11 +56,11 @@ export const MyBox = (props: IMyBox) => {
     >
       {props.children}
     </Box>
-  );
-};
+  )
+}
 
 export const MyStack = (props: IMyStack) => {
-  const { iRef, droppableProps, isDraggingOver, isDashed } = props;
+  const { iRef, droppableProps, isDraggingOver, isDashed } = props
   return (
     <Stack
       spacing="1.2rem"
@@ -78,5 +78,5 @@ export const MyStack = (props: IMyStack) => {
     >
       {props.children}
     </Stack>
-  );
-};
+  )
+}

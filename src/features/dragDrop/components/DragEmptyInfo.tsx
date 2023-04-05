@@ -1,6 +1,5 @@
-import React from 'react';
-import { Stack, Typography } from '@mui/material';
-import add from '../../../assets/add.svg';
+import { Stack, Typography } from '@mui/material'
+import add from '../../../assets/add.svg'
 
 export const DragEmptyInfo = () => {
   return (
@@ -28,5 +27,5 @@ export const DragEmptyInfo = () => {
         </Stack>
       </Stack>
     </Stack>
-  );
+  )
 }

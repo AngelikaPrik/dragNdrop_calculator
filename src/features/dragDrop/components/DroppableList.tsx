@@ -1,5 +1,5 @@
-import { Box, Stack } from '@mui/material';
-import React from 'react';
+import { Box, Stack } from '@mui/material'
+import React from 'react'
 import {
   DraggableProvided,
   DraggableRubric,
@@ -7,22 +7,22 @@ import {
   Droppable,
   DroppableProvided,
   DroppableStateSnapshot,
-} from 'react-beautiful-dnd';
-import { DragEmptyInfo } from './DragEmptyInfo';
-import { DragDropTabs } from './DragDropTabs';
-import { IDragComponent, ModeType } from '../types';
+} from 'react-beautiful-dnd'
+import { DragEmptyInfo } from './DragEmptyInfo'
+import { DragDropTabs } from './DragDropTabs'
+import { IDragComponent, ModeType } from '../types'
 
-import { DraggableItem } from './DraggableItem';
-import { MyStack } from '../uiModels';
+import { DraggableItem } from './DraggableItem'
+import { MyStack } from '../uiModels'
 
-const getCloneItem =
+const CloneItem =
   (items: IDragComponent[]) =>
   (
     provided: DraggableProvided,
-    _: DraggableStateSnapshot,
+    sn: DraggableStateSnapshot,
     rubric: DraggableRubric
   ) => {
-    const item: IDragComponent = items[rubric.source.index];
+    const item: IDragComponent = items[rubric.source.index]
     return (
       <Box
         boxShadow="0px 2px 4px rgba(0, 0, 0, 0.06), 0px 4px 6px rgba(0, 0, 0, 0.1)"
@@ -35,15 +35,15 @@ const getCloneItem =
       >
         {item.component}
       </Box>
-    );
-  };
+    )
+  }
 
 
 export const DroppableList = (props: IDroppableList) => {
-  const { droppableId, items, mode, setMode } = props;
+  const { droppableId, items, mode, setMode } = props
   const shouldHidden = (): boolean => {
-    return droppableId === 'sidebar' && mode === 'Runtime';
-  };
+    return droppableId === 'sidebar' && mode === 'Runtime'
+  }
 
   return (
     <Stack>
@@ -51,7 +51,7 @@ export const DroppableList = (props: IDroppableList) => {
         <DragDropTabs mode={mode} setMode={setMode} />
       )}
       {!shouldHidden() && (
-        <Droppable droppableId={droppableId} renderClone={getCloneItem(items)}>
+        <Droppable droppableId={droppableId} renderClone={CloneItem(items)}>
           {(provided: DroppableProvided, sn: DroppableStateSnapshot) => {
             return (
               <MyStack
@@ -64,7 +64,7 @@ export const DroppableList = (props: IDroppableList) => {
                   items.map((item, i) => {
                     const shouldRenderClone =
                       item.id === sn.draggingFromThisWith &&
-                      droppableId !== 'builder';
+                      droppableId !== 'builder'
                     return (
                       <React.Fragment key={item.id}>
                         {shouldRenderClone ? (
@@ -79,20 +79,20 @@ export const DroppableList = (props: IDroppableList) => {
                           />
                         )}
                       </React.Fragment>
-                    );
+                    )
                   })
                 ) : (
                   <DragEmptyInfo />
                 )}
                 {provided.placeholder}
               </MyStack>
-            );
+            )
           }}
         </Droppable>
       )}
     </Stack>
-  );
-};
+  )
+}
 
 interface IDroppableList {
   droppableId: string;

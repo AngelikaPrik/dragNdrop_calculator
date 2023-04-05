@@ -1,15 +1,14 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
-import eye from '../../../assets/eye.svg';
-import selector from '../../../assets/selector.svg';
-import eyeFill from '../../../assets/eye-fill.svg';
-import selectorFill from '../../../assets/selector-fill.svg';
-import { ModeType } from '../types';
+import { Box, Typography } from '@mui/material'
+import eye from '../../../assets/eye.svg'
+import selector from '../../../assets/selector.svg'
+import eyeFill from '../../../assets/eye-fill.svg'
+import selectorFill from '../../../assets/selector-fill.svg'
+import { ModeType } from '../types'
 
 const tabs: ITabs[] = [
   { title: 'Runtime', icon: eye, activeIcon: eyeFill },
   { title: 'Constructor', icon: selector, activeIcon: selectorFill },
-];
+]
 
 export const DragDropTabs = ({ mode, setMode }: ITabsField) => {
   const activeStyleTab = (tab: ITabs) => {
@@ -17,12 +16,12 @@ export const DragDropTabs = ({ mode, setMode }: ITabsField) => {
       return {
         background: '#fff',
         outline: '1px solid #E2E3E5',
-      };
+      }
     }
     return {
       cursor: 'pointer',
-    };
-  };
+    }
+  }
 
   return (
     <Box
@@ -54,8 +53,8 @@ export const DragDropTabs = ({ mode, setMode }: ITabsField) => {
         </Box>
       ))}
     </Box>
-  );
-};
+  )
+}
 
 interface ITabsField {
   mode: ModeType;

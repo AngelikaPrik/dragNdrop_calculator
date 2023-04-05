@@ -1,20 +1,19 @@
-import React from 'react';
-import { Draggable, DraggableId, DraggableProvided, DroppableId } from 'react-beautiful-dnd';
-import { IDragComponent, ModeType } from '../types';
-import { MyBox } from '../uiModels';
+import { Draggable, DraggableId, DraggableProvided, DroppableId } from 'react-beautiful-dnd'
+import { IDragComponent, ModeType } from '../types'
+import { MyBox } from '../uiModels'
 
 export const DraggableItem = (props: IDraggableItem) => {
-  const { item, draggableId, index, droppableId, mode } = props;
+  const { item, draggableId, index, droppableId, mode } = props
 
   const disableResult = (): boolean => {
-    return droppableId === 'builder' && item.name === 'result';
-  };
+    return droppableId === 'builder' && item.name === 'result'
+  }
   const isDraggedComponent = (): boolean => {
-    return droppableId === 'sidebar' && item.isDragged;
-  };
+    return droppableId === 'sidebar' && item.isDragged
+  }
   const isDragDisabled = (): boolean => {
-    return disableResult() || isDraggedComponent() || mode == 'Runtime';
-  };
+    return disableResult() || isDraggedComponent() || mode == 'Runtime'
+  }
 
   return (
     <Draggable
@@ -36,11 +35,11 @@ export const DraggableItem = (props: IDraggableItem) => {
           >
             {item.component}
           </MyBox>
-        );
+        )
       }}
     </Draggable>
-  );
-};
+  )
+}
 
 interface IDraggableItem {
   item: IDragComponent;

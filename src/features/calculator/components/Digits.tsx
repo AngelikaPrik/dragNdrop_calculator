@@ -1,23 +1,22 @@
-import React from 'react';
-import { Grid } from '@mui/material';
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
-import { addDigit, addFloat } from '../calculatorSlice';
-import { OperationBtn } from '../uiModels';
+import { Grid } from '@mui/material'
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux'
+import { addDigit, addFloat } from '../calculatorSlice'
+import { OperationBtn } from '../uiModels'
 
-const digits: DigitType[] = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ','];
+const digits: DigitType[] = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ',']
 
 export const Digits = () => {
-  const { mode } = useAppSelector(state => state.dragDrop);
-  const dispatch = useAppDispatch();
+  const { mode } = useAppSelector(state => state.dragDrop)
+  const dispatch = useAppDispatch()
 
   const onClick = (digit: DigitType): void => {
-    const val = digit.toString();
+    const val = digit.toString()
     if (val === ',') {
-      dispatch(addFloat(val));
+      dispatch(addFloat(val))
     } else {
-      dispatch(addDigit(val));
+      dispatch(addDigit(val))
     }
-  };
+  }
 
   return (
     <Grid container spacing="0.8rem">
@@ -33,7 +32,7 @@ export const Digits = () => {
         </Grid>
       ))}
     </Grid>
-  );
-};
+  )
+}
 
 type DigitType = string | number;

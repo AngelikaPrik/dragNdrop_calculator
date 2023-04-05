@@ -1,11 +1,10 @@
-import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
-import { getCompute } from '../calculatorSlice';
-import { ComputeButton } from '../uiModels';
+import { useAppDispatch, useAppSelector } from '../../../hooks/redux'
+import { getCompute } from '../calculatorSlice'
+import { ComputeButton } from '../uiModels'
 
 export const Compute = () => {
-  const { mode } = useAppSelector(state => state.dragDrop);
-  const dispatch = useAppDispatch();
+  const { mode } = useAppSelector(state => state.dragDrop)
+  const dispatch = useAppDispatch()
 
   return (
     <ComputeButton
@@ -15,5 +14,5 @@ export const Compute = () => {
     >
       =
     </ComputeButton>
-  );
-};
+  )
+}

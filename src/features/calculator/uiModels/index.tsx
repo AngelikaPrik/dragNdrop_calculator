@@ -1,5 +1,5 @@
-import { ButtonBase, ButtonBaseProps, InputBase, InputBaseProps } from '@mui/material';
-import { Theme, styled } from '@mui/material/styles';
+import { ButtonBase, ButtonBaseProps, InputBase, InputBaseProps } from '@mui/material'
+import { Theme, styled } from '@mui/material/styles'
 
 export const OperationBtn = styled(ButtonBase)(
   ({ theme }: { theme: Theme }) => ({
@@ -19,7 +19,7 @@ export const OperationBtn = styled(ButtonBase)(
       color: theme.palette.primary.light,
     },
   })
-) as React.FC<ButtonBaseProps>;
+) as React.FC<ButtonBaseProps>
 
 export const ResultInput = styled(InputBase)(({ theme }: { theme: Theme }) => ({
   backgroundColor: '#F3F4F6',
@@ -38,7 +38,7 @@ export const ResultInput = styled(InputBase)(({ theme }: { theme: Theme }) => ({
       WebkitTextFillColor: '#000',
     },
   },
-})) as React.FC<InputBaseProps>;
+})) as React.FC<InputBaseProps>
 
 export const ComputeButton = styled(ButtonBase)(
   ({ theme }: { theme: Theme }) => ({
@@ -52,4 +52,4 @@ export const ComputeButton = styled(ButtonBase)(
       opacity: '.9',
     },
   })
-) as React.FC<ButtonBaseProps>;
+) as React.FC<ButtonBaseProps>

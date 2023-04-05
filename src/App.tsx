@@ -1,6 +1,5 @@
-import React from 'react';
-import { Container, createTheme, ThemeProvider } from '@mui/material';
-import { DragDrop } from './features/dragDrop';
+import { Container, createTheme, ThemeProvider } from '@mui/material'
+import { DragDrop } from './features/dragDrop'
 
 const theme = createTheme({
   typography: {
@@ -18,7 +17,7 @@ const theme = createTheme({
   shape: {
     borderRadius: 6,
   },
-});
+})
 
 function App() {
   return (
@@ -27,7 +26,7 @@ function App() {
         <DragDrop />
       </Container>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
