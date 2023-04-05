@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux'
+import { useAppDispatch, useAppSelector } from '@hooks/redux'
 import { getCompute } from '../calculatorSlice'
 import { ComputeButton } from '../uiModels'
 

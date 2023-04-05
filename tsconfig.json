@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "paths": {
+      "@hooks*": ["./src/hooks*"],
+      "@assets*": ["./src/assets*"],
+    },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],

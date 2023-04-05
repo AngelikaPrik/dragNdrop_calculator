@@ -1,5 +1,5 @@
 import { Stack, Typography } from '@mui/material'
-import add from '../../../assets/add.svg'
+import add from '@assets/add.svg'
 
 export const DragEmptyInfo = () => {
   return (

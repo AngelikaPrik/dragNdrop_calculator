@@ -1,5 +1,5 @@
 import { ChangeEvent, useEffect, useState } from 'react'
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux'
+import { useAppDispatch, useAppSelector } from '@hooks/redux'
 import { setOperands, setOperation } from '../calculatorSlice'
 import { ResultInput } from '../uiModels'
 import { validate } from '../utils/result.function'

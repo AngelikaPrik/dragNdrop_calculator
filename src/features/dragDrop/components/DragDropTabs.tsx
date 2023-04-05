@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
-import eye from '../../../assets/eye.svg'
-import selector from '../../../assets/selector.svg'
-import eyeFill from '../../../assets/eye-fill.svg'
-import selectorFill from '../../../assets/selector-fill.svg'
+import eye from '@assets/eye.svg'
+import selector from '@assets/selector.svg'
+import eyeFill from '@assets/eye-fill.svg'
+import selectorFill from '@assets/selector-fill.svg'
 import { ModeType } from '../types'
 
 const tabs: ITabs[] = [
@@ -57,12 +57,12 @@ export const DragDropTabs = ({ mode, setMode }: ITabsField) => {
 }
 
 interface ITabsField {
-  mode: ModeType;
-  setMode: (m: ModeType) => void;
+  mode: ModeType
+  setMode: (m: ModeType) => void
 }
 
 interface ITabs {
-  title: ModeType | string;
-  icon: string;
-  activeIcon: string;
+  title: ModeType | string
+  icon: string
+  activeIcon: string
 }

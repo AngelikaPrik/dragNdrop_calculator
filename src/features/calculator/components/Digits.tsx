@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material'
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux'
+import { useAppDispatch, useAppSelector } from '@hooks/redux'
 import { addDigit, addFloat } from '../calculatorSlice'
 import { OperationBtn } from '../uiModels'
 

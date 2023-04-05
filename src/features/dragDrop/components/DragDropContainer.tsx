@@ -6,7 +6,7 @@ import { onDragEnd } from '../utils/dragDrop.function'
 import { DroppableList } from './DroppableList'
 import { ColumnNameType, IDragComponent, ModeType } from '../types'
 import { DragContainer } from '../uiModels'
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux'
+import { useAppDispatch, useAppSelector } from '@hooks/redux'
 
 interface IColumn {
   id: ColumnNameType

@@ -1,5 +1,5 @@
 import { Stack } from '@mui/system'
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux'
+import { useAppDispatch, useAppSelector } from '@hooks/redux'
 import { setOperation } from '../calculatorSlice'
 import { OperationType } from '../types'
 import { OperationBtn } from '../uiModels'
