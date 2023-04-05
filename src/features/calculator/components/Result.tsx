@@ -37,6 +37,10 @@ export const Result = () => {
     else setInputValue('')
   }, [operation])
 
+  useEffect(() => {
+    if (isConstructor) dispatch(setOperands(''))
+  }, [mode])
+
   const fontSize = (): Record<'fontSize', string> => {
     const input = inputValue.length,
       opOne = operandOne.length,
